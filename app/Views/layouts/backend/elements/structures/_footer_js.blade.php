@@ -7,6 +7,7 @@
 <script src="{{ asset('backend/vendors/dataTables/dataTables.bootstrap4.min.js') }}"></script>
 <script src="{{ asset('backend/vendors/select2/dist/js/select2.min.js') }}"></script>
 <script src="{{ asset('backend/vendors/bootstrap-toggle/bootstrap-toggle.min.js') }}"></script>
+<script src="{{ asset('backend/vendors/quill/dist/quill.min.js') }}"></script>
 
 @stack('plugin_js')
 

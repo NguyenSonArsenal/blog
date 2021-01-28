@@ -4,13 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>INSPINIA | Dashboard</title>
+    <title>Dashboard</title>
+
+    <!-- Define the favicon of a page -->
+    <link href="<?php assetsFrontend('assets/images/layout/favicon.png')?>" type="image/x-icon" rel="icon">
+
     <link href="{{ asset('backend/vendors/bootstrap4/bootstrap4.min.css') }}" rel="stylesheet">
     <!-- FooTable: For product list page -->
     <link href="{{ asset('backend/vendors/footable/footable.core.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/vendors/dataTables/datatables.min.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/vendors/select2/dist/css/select2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/vendors/bootstrap-toggle/bootstrap-toggle.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('backend/vendors/quill/dist/quill.snow.css') }}" rel="stylesheet">
 
     <link href="{{ asset('backend/css/fonts/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
 

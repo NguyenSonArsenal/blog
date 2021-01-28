@@ -18,7 +18,7 @@ class AdminTableSeeder extends Seeder
         $tableName = Admin::getTableName();
         DB::table($tableName)->truncate();
         $entities = [];
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 103; $i++) {
             $item = [
                 'name' => 'Nguyễn Văn Admin_' . $i,
                 'email' => 'nguyenvanadmin_' . $i . '@gmail.com',

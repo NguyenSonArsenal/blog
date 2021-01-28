@@ -54,3 +54,8 @@ function showLoading() {
 function hideLoading() {
     $.LoadingOverlay("hide");
 }
+
+
+function selectorIsExits(selector) {
+    return $(selector).length > 0;
+}

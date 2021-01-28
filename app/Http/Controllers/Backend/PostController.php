@@ -1,17 +1,18 @@
 <?php
 
+
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Backend\Base\BackendController;
-use App\Model\Entities\User;
-use App\Repositories\AdminRepository;
-use App\Repositories\UserRepository;
+use App\Model\Entities\Post;
+use App\Repositories\PostRepository;
+use Illuminate\Support\Facades\Log;
 
-class UserController extends BackendController
+class PostController extends BackendController
 {
-    public function __construct(UserRepository $userRepository)
+    public function __construct(PostRepository $postRepository)
     {
-        $this->setRepository($userRepository);
+        $this->setRepository($postRepository);
     }
 
     public function index()
@@ -23,7 +24,7 @@ class UserController extends BackendController
             'entities' => $entities
         ];
 
-        return view('backend.user.index', $viewData);
+        return view('backend.post.index', $viewData);
     }
 
     public function create()
@@ -33,7 +34,7 @@ class UserController extends BackendController
             'entity' => $entity
         ];
 
-        return view('backend.user.create', $viewData);
+        return view('backend.post.create', $viewData);
     }
 
     public function store()
@@ -41,38 +42,39 @@ class UserController extends BackendController
         try {
             $params = request()->all();
 
-            /** @var \App\Validators\Backend\UserValidator $validator */
+            /** @var \App\Validators\Backend\PostValidator $validator */
             $validator = $this->getRepository()->getValidator();
-            $isValid = $validator->validateStoreUser($params);
+            $isValid = $validator->validateStorePost($params);
 
             if (!$isValid) {
-                unset($params['avatar']);
+                unset($params['featured_image']);
                 $this->setFormData($params);
                 return $this->_inValid($validator->errors());
             }
 
-            if (request()->hasFile('avatar')) {
-                $fileName = time() . "_"  . request()->file('avatar')->getClientOriginalName();
-                $uploadPath  = public_path('backend/uploads/') . date('Y-m-d'); // Folder upload path
+            if (request()->hasFile('featured_image')) {
+                $fileName = time() . "_"  . request()->file('featured_image')->getClientOriginalName();
+                $uploadPath  = public_path('admin-assets/uploads/') . date('Y-m-d'); // Folder upload path
 
                 if (!file_exists($uploadPath)) {
                     mkdir($uploadPath, 0777, true);
                 }
 
-                request()->file('avatar')->move($uploadPath, $fileName);
-                $params['avatar'] = '/backend/uploads/' . date('Y-m-d') . '/' . $fileName;
+                request()->file('featured_image')->move($uploadPath, $fileName);
+                $params['featured_image'] = '/admin-assets/uploads/' . date('Y-m-d') . '/' . $fileName;
             }
 
-            $entity = new User();
+            $entity = new Post();
+
             $entity->fill($params);
             $entity->save();
             $this->afterStoreUpdateCommit();
-            return backRouteSuccess(getConstant('BACKEND_ROUTE_NAME_PREFIX') . '.user.list', transMessage('create_success'));
+            return backRouteSuccess('admin.post.list', transMessage('create_success'));
         } catch (\Exception $e) {
             // @todo log errors
-            dd($e);
+            Log::error($e);
         }
-        return backRouteError(getConstant('BACKEND_ROUTE_NAME_PREFIX') . '.user.list', transMessage('system_error'));
+        return backRouteError('admin.post.list', transMessage('system_error'));
     }
 
     public function edit($id)
@@ -86,10 +88,9 @@ class UserController extends BackendController
             $viewData = [
                 'entity' => $entity
             ];
-            return view('backend.user.edit', $viewData);
+            return view('backend.post.edit', $viewData);
         } catch (\Exception $e) {
             // @todo log error
-            dd($e);
         }
         return backSystemError();
     }
@@ -104,26 +105,26 @@ class UserController extends BackendController
 
             $params = request()->all();
 
-            /** @var \App\Validators\Backend\UserValidator $validator */
+            /** @var \App\Validators\Backend\PostValidator $validator */
             $validator = $this->getRepository()->getValidator();
-            $isValid = $validator->validateStoreUser($params, $entity->getKey());
+            $isValid = $validator->validateStorePost($params);
 
             if (!$isValid) {
-                unset($params['avatar']);
+                unset($params['featured_image']);
                 $this->setFormData($params);
                 return $this->_inValid($validator->errors());
             }
 
-            if (request()->hasFile('avatar')) {
-                $fileName = time() . "_"  . request()->file('avatar')->getClientOriginalName();
-                $uploadPath  = public_path('backend/uploads/') . date('Y-m-d'); // Folder upload path
+            if (request()->hasFile('featured_image')) {
+                $fileName = time() . "_"  . request()->file('featured_image')->getClientOriginalName();
+                $uploadPath  = public_path('admin-assets/uploads/') . date('Y-m-d'); // Folder upload path
 
                 if (!file_exists($uploadPath)) {
                     mkdir($uploadPath, 0777, true);
                 }
 
-                request()->file('avatar')->move($uploadPath, $fileName);
-                $params['avatar'] = '/backend/uploads/' . date('Y-m-d') . '/' . $fileName;
+                request()->file('featured_image')->move($uploadPath, $fileName);
+                $params['featured_image'] = '/admin-assets/uploads/' . date('Y-m-d') . '/' . $fileName;
                 // @todo delete old file
             }
 
@@ -131,9 +132,10 @@ class UserController extends BackendController
             $entity->fill($params);
             $entity->save();
             $this->afterStoreUpdateCommit();
-            return backRouteSuccess(getConstant('BACKEND_ROUTE_NAME_PREFIX') . '.user.list', transMessage('update_success'));
+            return backRouteSuccess('admin.post.list', transMessage('update_success'));
         } catch (\Exception $e) {
             // @todo log error
+            // dd($e);
         }
         return backSystemError();
     }

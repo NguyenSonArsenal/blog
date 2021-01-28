@@ -91,6 +91,7 @@ img {
 
 .footer {
     background: #F3F3F4;
+    position: fixed;
 }
 
 .x_panel .x_title > h2 {
@@ -134,6 +135,20 @@ img {
 
 .error ul li {
     list-style: circle;
+}
+
+#editor-quill {
+    height: auto;
+    min-height: 285px;
+}
+
+.card-body .card-body__head {
+    background: #EFF2F5;
+    height: 40px;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 0 !important;
+    justify-content: space-between;
 }
 
 /* ============================ END LAYOUT =================== */

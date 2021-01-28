@@ -16,17 +16,17 @@ Route::group(['prefix'=>'admin/', 'as'=>'admin.'], function(){
     Route::delete('/{id}', ['as' => 'destroy', 'uses' => 'AdminController@destroy']);
 });
 
-Route::group(['prefix'=>'user/', 'as'=>'user.'], function(){
+Route::group(['prefix'=>'post/', 'as'=>'post.'], function(){
 
-    Route::get('/', ['as' => 'list', 'uses' => 'UserController@index']);
+    Route::get('/', ['as' => 'list', 'uses' => 'PostController@index']);
 
-    Route::get('/create', ['as' => 'create', 'uses' => 'UserController@create']);
+    Route::get('/create', ['as' => 'create', 'uses' => 'PostController@create']);
 
-    Route::post('/', ['as' => 'store', 'uses' => 'UserController@store']);
+    Route::post('/', ['as' => 'store', 'uses' => 'PostController@store']);
 
-    Route::get('/{id}/edit', ['as' => 'edit', 'uses' => 'UserController@edit']);
+    Route::get('/{id}/edit', ['as' => 'edit', 'uses' => 'PostController@edit']);
 
-    Route::post('/{id}', ['as' => 'update', 'uses' => 'UserController@update']);
+    Route::post('/{id}', ['as' => 'update', 'uses' => 'PostController@update']);
 
-    Route::delete('/{id}', ['as' => 'destroy', 'uses' => 'UserController@destroy']);
+    Route::delete('/{id}', ['as' => 'destroy', 'uses' => 'PostController@destroy']);
 });

@@ -20,7 +20,7 @@
                 </div>
             </li>
             <li class="active">
-                <a href="#">
+                <a href="{{ backendRouter('dashboard')  }}">
                     <i class="fa fa-th-large"></i>
                     <span class="nav-label">Trang chủ</span>
                 </a>
@@ -32,9 +32,9 @@
                 </a>
             </li>
             <li>
-                <a href="{{ backendRouter('user.list') }}">
+                <a href="{{ backendRouter('post.list') }}">
                     <i class="fa fa-desktop"></i>
-                    <span class="nav-label">Users</span>
+                    <span class="nav-label">Bài viết</span>
                 </a>
             </li>
         </ul>

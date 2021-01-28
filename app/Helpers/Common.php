@@ -222,3 +222,11 @@ if (!function_exists('sql_binding')) {
         return $boundSql;
     }
 }
+
+if (!function_exists('trimValuesArray')) {
+
+    function trimValuesArray($arr = [])
+    {
+        return array_map('trim', $arr);
+    }
+}
