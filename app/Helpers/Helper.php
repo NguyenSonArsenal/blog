@@ -15,3 +15,29 @@ function getModule()
 
     return $module;
 }
+
+function assetsFrontend($path = '')
+{
+    $http = isset($_SERVER['HTTPS']) ? "https://" : "http://";
+    echo $http . $_SERVER['HTTP_HOST'] . "/frontend/" . ltrim($path, '/');
+}
+
+function getMenuActive($item)
+{
+    $requestUri = $_SERVER['REQUEST_URI'];
+
+    if ($requestUri == '/') {
+        $requestUri = 'home';
+    }
+
+    if (strContain($requestUri, 'v-blog')) {
+        $requestUri = 'post';
+    }
+
+    echo strContain($requestUri, $item) ? "active" : "";
+}
+
+function strContain($str, $needle)
+{
+    return strpos($str, $needle) !== false;
+}
