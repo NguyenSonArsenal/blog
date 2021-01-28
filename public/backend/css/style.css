@@ -1,0 +1,23 @@
+﻿/* ========== PRODUCT ========== */
+#product .custom-file-input:focus {
+    border: 1px solid red;
+}
+
+#product .custom-file{
+    width: 300px;
+}
+
+#product .custom-file-label:after {
+    content: 'Chọn file';
+}
+
+#product .img_thumbnail {
+    vertical-align: unset;
+    width: 300px;
+    margin-top: 4px;
+}
+
+.ibox-title {
+    padding: 15px 80px 8px 15px;
+}
+/* ========== END PRODUCT ========== */

@@ -1,0 +1,46 @@
+<div class="col-md-3 left_col">
+    <div class="left_col scroll-view">
+        <div class="navbar nav_title" style="border: 0;">
+            <a href="{{route('dashboard')}}" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <!-- menu profile quick info -->
+        <div class="profile clearfix">
+            <div class="profile_pic">
+                <img src="{{ asset('backend/images/img.jpg') }}" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>{{getCurrentAdminName()}}</h2>
+            </div>
+        </div>
+        <!-- /menu profile quick info -->
+
+        <br/>
+
+        <!-- sidebar menu -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                    <li><a href="{{route('dashboard')}}"><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="javascript:void(0)">Dashboard</a></li>
+                            <li><a href="javascript:void(0)">Dashboard2</a></li>
+                            <li><a href="javascript:void(0)">Dashboard3</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="" href="{{route('admin.index')}}"><i class="fa fa-home"></i> Admin </a></li>
+                    <li><a class="" href="{{route('users.index')}}"><i class="fa fa-home"></i> Users </a></li>
+                    <li><a class="" href="{{route('contact.index')}}"><i class="fa fa-home"></i> Contact </a></li>
+                    <li><a class="" href="{{route('clubs.index')}}"><i class="fa fa-home"></i> Clubs </a></li>
+                    <li><a class="" href="{{route('categories.index')}}"><i class="fa fa-home"></i> Categories </a></li>
+                    <li><a class="" href="{{route('products.index')}}"><i class="fa fa-home"></i> Products </a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /sidebar menu -->
+    </div>
+</div>
