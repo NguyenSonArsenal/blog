@@ -63,112 +63,19 @@
                     <div class="col-sm-6">
                         <h2 class="title color-red">Nhật kí sưu tầm</h2><br>
                         <ul class="list">
-                            <li>
-                                <a class="blog__item" href="v-blog/arsenal-arteta-dung-nguoi-dung-thoi-diem">
-                                    <h4 class="item-title f18">Arsenal - Arteta đúng người đúng thời điểm.</h4>
-                                    <small class="item-time">Ngày 13 tháng 1 năm 2020</small>
-                                    <p class="item-description">
-                                        Arsenal - Mikel Arteta - người mang trong mình 3 bộ não - sự kết hợp đúng người lẫn thời điểm để hy vọng.
-                                    </p>
-                                </a>
-                            </li>
-                            <br>
-
-                            <li>
-                                <a class="blog__item" href="v-blog/ngay-cuoi-thap-ki">
-                                    <h4 class="item-title f18">Ngày cuối thập kỉ.</h4>
-                                    <small class="item-time">Ngày 31 tháng 12 năm 2019</small>
-                                    <p class="item-description">
-                                        Ngày cuối của thập kỉ, dành trọn sự iu thương cho bản thân mình.
-                                    </p>
-                                </a>
-                            </li>
-                            <br>
-
-                            <li>
-                                <a class="blog__item" href="v-blog/nhung-ngay-cuoi-tuan-ban-ron">
-                                    <h4 class="item-title f18">Những ngày cuối tuần bận rộn.</h4>
-                                    <small class="item-time">Ngày 12 tháng 12 năm 2019</small>
-                                    <p class="item-description">
-                                        Qua rồi, những ngày cuối tuần ngủ nướng, mẹ gọi mà còn làm nũng mẹ cho con ngủ thêm một chút...
-                                    </p>
-                                </a>
-                            </li>
-                            <br>
-
-                            <li>
-                                <a class="blog__item" href="v-blog/chung-ta-nen-co-cho-minh-nhung-su-lua-chon">
-                                    <h4 class="item-title f18">Chúng ta nên có cho mình những sự lựa chọn.</h4>
-                                    <small class="item-time">Ngày 5 tháng 12 năm 2019</small>
-                                    <p class="item-description">
-                                        Năm đó, 1 cái đề toán, 10 câu, 180p, làm 9 câu đầu cứ cho là hết 23 phút...
-                                    </p>
-                                </a>
-                            </li>
-                            <br>
-
-                            <li>
-                                <a class="blog__item" href="/v-blog/nguoi-thay-va-moi-tinh-7-nam">
-                                    <h4 class="item-title f18">Người thầy, mối tình 7 năm và hồi kết.</h4>
-                                    <small class="item-time">Ngày 11 tháng 10 năm 2019</small>
-                                    <p class="item-description">
-                                        Trong cái tiết trời se se lạnh những ngày đầu thu, của những con chữ cuối cùng trên giảng đường,
-                                        đánh dấu cột mốc mối tình 7 năm chuẩn bị tới hồi kết.
-                                        Con tình cờ gặp lại người thầy năm xưa....
-                                    </p>
-                                </a>
-                            </li>
-                            <br>
-
-                            <li>
-                                <a class="blog__item" href="/v-blog/chung-ta-lon-ca-roi">
-                                    <h4 class="item-title f18">Chúng ta lớn cả rồi.</h4>
-                                    <small class="item-time">Ngày 24 tháng 8 năm 2019</small>
-                                    <p class="item-description">
-                                        Có lớn, có khôn rồi mới hiểu, trên đời này, chẳng sợ gì,
-                                        chỉ sợ một ngày mai nhìn thấy những giọt lệ lăn dài trên đôi mắt của ba mẹ....
-                                    </p>
-                                </a>
-                            </li>
-                            <br>
-
-                            <li>
-                                <a class="blog__item" href="/v-blog/mot-thoang-bach-khoa-trong-toi">
-                                    <h4 class="item-title f18">Một thoáng bách khoa trong tôi.</h4>
-                                    <small class="item-time">Ngày 21 tháng 7 năm 2019</small>
-                                    <p class="item-description">
-                                        Gần đây, tôi hay nhận được rất nhiều cuộc điện thoại từ các phụ huynh ở quê, có con vừa thi đại học,
-                                        và có nguyện vọng cho con vào học Đại Học Bách Khoa Hà Nội...
-                                    </p>
-                                </a>
-                            </li>
-                            <br>
-
-                            <li>
-                                <a class="blog__item" href="/v-blog/cau-chuyen-ve-chuyen-xe-muon">
-                                    <h4 class="item-title f18">Câu chuyện về quê trên chuyến xe muộn.</h4>
-                                    <small class="item-time">Ngày 7 tháng 7 năm 2019</small>
-                                    <p class="item-description">
-                                        Bài viết được trích từ một người bạn, người em mình mới quen, xin phép được gọi là cô
-                                        gái...
-                                    </p>
-                                </a>
-                            </li>
-                            <br>
-
-                            <li>
-                                <a class="blog__item" href="/v-blog/loi-xin-loi-ba-chan-thanh">
-                                    <h4 class="item-title f18">Lời xin lỗi ba chân thành</h4>
-                                    <small class="item-time">Ngày 24 tháng 3 năm 2019</small>
-                                    <p class="item-description">
-                                        Xin lỗi ba vì tất cả những chuyện đã sảy ra. Khi con đã để lỡ mất những nguyện vọng của
-                                        ba...
-                                    </p>
-                                </a>
-                            </li>
+                            @foreach($lastPosts as $post)
+                                <li>
+                                    <a class="blog__item" href="{{ frontendRouter('post.detail', ['id' => $post->getKey()]) }}">
+                                        <h4 class="item-title f18">{{ $post->title }}</h4>
+                                        <small class="item-time">{{ $post->displayTimePost() }}</small>
+                                        <p class="item-description">{{ $post->short_description }}</p>
+                                    </a>
+                                </li>
+                                <br>
+                            @endforeach
                         </ul>
                         <div class="text-right">
-                            <a class="more color-black-default " href="">» Xem thêm</a>
+                            <a class="more color-black-default " href="{{ frontendRouter('post.list') }}">» Xem thêm</a>
                         </div>
                     </div>
                 </div>

@@ -18,8 +18,32 @@ class PostRepository extends BaseRepository
         return PostValidator::class;
     }
 
-    public function getListForFrontend()
+    // ========== FRONTEND ==========
+
+    /**
+     * @return mixed
+     */
+    public function frontendGetList()
     {
-        return $query->orderBy('id', 'desc')->paginate(getBackendPagination());
+        return $this->_builder()->orderBy('id', 'desc')->paginate(getFrontendPagination());
     }
+
+    /**
+     * get list 5 last post for home page
+     */
+    public function frontendGetLastPosts()
+    {
+        return $this->_builder()->orderBy('id', 'desc')->take(5)->get();
+    }
+
+    public function frontendGetNextEntity($id)
+    {
+        return $this->_builder()->where('id', '>', $id)->orderBy('id')->first();
+    }
+
+    public function frontendGetPreviousEntity($id)
+    {
+        return $this->_builder()->where('id', '<', $id)->orderBy('id','desc')->first();
+    }
+    // ========== END FRONTEND ==========
 }

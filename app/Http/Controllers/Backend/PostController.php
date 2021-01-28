@@ -54,14 +54,14 @@ class PostController extends BackendController
 
             if (request()->hasFile('featured_image')) {
                 $fileName = time() . "_"  . request()->file('featured_image')->getClientOriginalName();
-                $uploadPath  = public_path('admin-assets/uploads/') . date('Y-m-d'); // Folder upload path
+                $uploadPath  = public_path('backend/uploads/') . date('Y-m-d'); // Folder upload path
 
                 if (!file_exists($uploadPath)) {
                     mkdir($uploadPath, 0777, true);
                 }
 
                 request()->file('featured_image')->move($uploadPath, $fileName);
-                $params['featured_image'] = '/admin-assets/uploads/' . date('Y-m-d') . '/' . $fileName;
+                $params['featured_image'] = '/backend/uploads/' . date('Y-m-d') . '/' . $fileName;
             }
 
             $entity = new Post();
@@ -117,14 +117,14 @@ class PostController extends BackendController
 
             if (request()->hasFile('featured_image')) {
                 $fileName = time() . "_"  . request()->file('featured_image')->getClientOriginalName();
-                $uploadPath  = public_path('admin-assets/uploads/') . date('Y-m-d'); // Folder upload path
+                $uploadPath  = public_path('backend/uploads/') . date('Y-m-d'); // Folder upload path
 
                 if (!file_exists($uploadPath)) {
                     mkdir($uploadPath, 0777, true);
                 }
 
                 request()->file('featured_image')->move($uploadPath, $fileName);
-                $params['featured_image'] = '/admin-assets/uploads/' . date('Y-m-d') . '/' . $fileName;
+                $params['featured_image'] = '/backend/uploads/' . date('Y-m-d') . '/' . $fileName;
                 // @todo delete old file
             }
 

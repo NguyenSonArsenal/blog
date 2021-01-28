@@ -341,7 +341,7 @@ footer {
     height: 50px;
     line-height: 50px;
     background: #E3EAEA;
-    position: absolute;
+    /*position: absolute;*/
     bottom: 0;
     width: 100%;
 }

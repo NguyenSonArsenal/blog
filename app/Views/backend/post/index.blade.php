@@ -59,9 +59,9 @@
                                     </span>
                                 </td>
                                 <td>
-                                    @if($entity->avatar)
+                                    @if($entity->featured_image)
                                         <a href="javascript:void(0)">
-                                            <img width="35px" src="{{ $entity->avatar }}" alt="Image name">
+                                            <img width="35px" src="{{ $entity->featured_image }}" alt="Image name">
                                         </a>
                                     @else
                                         <a href="javascript:void(0)">

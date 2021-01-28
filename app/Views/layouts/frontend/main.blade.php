@@ -85,7 +85,7 @@
                         </a>
                     </li>
                     <li class="nav-item" data-scroll="home">
-                        <a class="nav-item__link nav-item__link_home <?php getMenuActive('post') ?>" href="{{ frontendRouter('list_post') }}">
+                        <a class="nav-item__link nav-item__link_home <?php getMenuActive('post') ?>" href="{{ frontendRouter('post.list') }}">
                             <span>Chém gió</span>
                         </a>
                     </li>

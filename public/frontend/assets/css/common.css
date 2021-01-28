@@ -7,20 +7,24 @@
   top: 0;
   left: 0;
   bottom: 0;
-  right: 0; }
+  right: 0;
+}
 
 .mt-15 {
-  margin-top: 15px; }
+  margin-top: 15px;
+}
 
 .max-w-100 {
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 .transition {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+}
 
 .h-32 {
   height: 32px
@@ -38,18 +42,23 @@
 .f14 {
   font-size: 14px;
 }
+
 .f16 {
   font-size: 16px;
 }
+
 .f18 {
   font-size: 18px;
 }
+
 .f20 {
   font-size: 20px;
 }
+
 .f22 {
   font-size: 22px;
 }
+
 /** End font size */
 
 .opacity-0 {
@@ -72,4 +81,91 @@
 .color-grey {
   color: #818C9D;
 }
+
 /* End color */
+
+
+/* FRONTEND PAGINATION */
+.pagination-container nav a {
+  text-decoration: none;
+  padding: 3px;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  transition: all .3s ease;
+}
+
+.btn-default {
+  color: #0d723b;
+  background-color: transparent;
+  border: 1px solid;
+  border-color: #b6b6b6;
+  padding: 5px 20px;
+  border: 1px solid #df1c22;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.btn-default:hover {
+  color: #fff;
+  background-color: #df1c22;
+  border-color: #fff;
+}
+
+.pagination-container nav ul {
+  list-style: none;
+  padding: 0 5px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.pagination .mdc-icon-button .icon-text {
+  color: #000;
+  font-size: 13px;
+  padding: 4px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  vertical-align: center;
+  z-index: 2;
+  border: 1px solid #df1c22;
+  margin: 0 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.pagination .mdc-icon-button.active {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.pagination .mdc-icon-button.active .icon-text {
+  color: #ffffff;
+  position: relative;
+}
+
+.pagination .mdc-icon-button.active .icon-text:after {
+  content: "";
+  border-radius: 50%;
+  background-color: #df1c22;
+  width: 30px;
+  height: 30px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: -1;
+}
+
+.pagination-container .fixed-ontop {
+  box-shadow: none;
+  background: none;
+}
+
+/* END FRONTEND PAGINATION */

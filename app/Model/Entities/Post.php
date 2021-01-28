@@ -3,9 +3,12 @@
 namespace App\Model\Entities;
 
 use App\Model\Base\Auth\AuthTmp;
+use App\Model\Presenters\PostPresenter;
 
 class Post extends AuthTmp
 {
+    use PostPresenter;
+
     protected $table = 'posts';
 
     protected $fillable = [
